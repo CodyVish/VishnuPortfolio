@@ -32,7 +32,7 @@ export default function About() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5 }}
         >
-I am from Rajahmundry, Andhra Pradesh, where I completed my high school and intermediate education. I earned my Bachelor's degree in Computer Science and Engineering with a specialization in Artificial Intelligence and Data Science from BVC Engineering College (Odalarevu, AP) in 2024.        </motion.p>
+I am from Rajahmundry, Andhra Pradesh, where I completed my high school and intermediate education. I earned my Bachelors degree in Computer Science and Engineering with a specialization in Artificial Intelligence and Data Science from BVC Engineering College (Odalarevu, AP) in 2024.        </motion.p>
 
         <motion.p
           className="text-gray-300 text-xl leading-relaxed font-inter mb-4"
