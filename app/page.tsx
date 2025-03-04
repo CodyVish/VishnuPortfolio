@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import About from "./sections/about"; 
+import About from "./sections/about";
 import ExperiencePage from "./sections/experience";
 import TechnicalSkills from "./sections/technicalSkills";
 import ProjectsAndCertifications from "./sections/projectsAndCertifications";
@@ -30,7 +30,7 @@ export default function Home() {
       <div className="flex flex-col justify-center items-center flex-grow pt-16 space-y-8">
         {/* Animated Heading */}
         <motion.h1
-          className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-400 text-7xl sm:text-5xl font-extrabold leading-tight font-poppins"
+          className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-400 text-7xl sm:text-6xl font-extrabold leading-tight font-poppins"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -49,73 +49,27 @@ export default function Home() {
           Dive in and explore how I turn ideas into reality.
         </motion.p>
 
-        {/* Section Buttons */}
-        <div className="mt-12 flex flex-wrap justify-center space-x-4 sm:space-x-2 sm:space-y-4">
-          <a href="#about">
-            <motion.button
-              className="bg-gradient-to-r from-cyan-300 to-purple-400 text-black px-6 py-3 rounded-full text-xl sm:text-lg font-poppins transition duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-purple-500"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1.5, delay: 1 }}
-            >
-              About
-            </motion.button>
-          </a>
-
-          <a href="#experience">
-            <motion.button
-              className="bg-gradient-to-r from-cyan-300 to-purple-400 text-black px-6 py-3 rounded-full text-xl font-poppins transition duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-purple-500"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1.5, delay: 1.2 }}
-            >
-              Experience
-            </motion.button>
-          </a>
-
-          <a href="#technicalSkills">
-            <motion.button
-              className="bg-gradient-to-r from-cyan-300 to-purple-400 text-black px-6 py-3 rounded-full text-xl font-poppins transition duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-purple-500"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1.5, delay: 1.4 }}
-            >
-              Technical Skills
-            </motion.button>
-          </a>
-
-          <a href="#projectsAndCertifications">
-            <motion.button
-              className="bg-gradient-to-r from-cyan-300 to-purple-400 text-black px-6 py-3 rounded-full text-xl font-poppins transition duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-purple-500"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1.5, delay: 1.6 }}
-            >
-              Projects & Certifications
-            </motion.button>
-          </a>
-
-          <a href="#achievements">
-            <motion.button
-              className="bg-gradient-to-r from-cyan-300 to-purple-400 text-black px-6 py-3 rounded-full text-xl font-poppins transition duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-purple-500"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1.5, delay: 1.8 }}
-            >
-              Achievements
-            </motion.button>
-          </a>
-
-          <a href="#contact">
-            <motion.button
-              className="bg-gradient-to-r from-cyan-300 to-purple-400 text-black px-6 py-3 rounded-full text-xl font-poppins transition duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-purple-500"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1.5, delay: 2 }}
-            >
-              Contact
-            </motion.button>
-          </a>
+        {/* Section Buttons (Now Responsive) */}
+        <div className="mt-12 flex flex-wrap justify-center gap-4 sm:gap-3 md:flex-nowrap">
+          {[
+            { href: "#about", label: "About" },
+            { href: "#experience", label: "Experience" },
+            { href: "#technicalSkills", label: "Technical Skills" },
+            { href: "#projectsAndCertifications", label: "Projects & Certifications" },
+            { href: "#achievements", label: "Achievements" },
+            { href: "#contact", label: "Contact" },
+          ].map(({ href, label }, index) => (
+            <a key={href} href={href} className="w-full sm:w-auto">
+              <motion.button
+                className="w-full md:w-auto bg-gradient-to-r from-cyan-300 to-purple-400 text-black px-6 py-3 rounded-full text-xl sm:text-lg font-poppins transition duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-purple-500"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1.5, delay: 1 + index * 0.2 }}
+              >
+                {label}
+              </motion.button>
+            </a>
+          ))}
         </div>
       </div>
 
@@ -125,30 +79,26 @@ export default function Home() {
           <About />
         </div>
 
-        <div id="experience" className="mt-70">
+        <div id="experience" className="mt-20">
           <ExperiencePage />
         </div>
 
-        <div id="technicalSkills" className="mt-30  ">
+        <div id="technicalSkills" className="mt-20">
           <TechnicalSkills />
         </div>
 
-        <div id="projectsAndCertifications" className="mt-50">
+        <div id="projectsAndCertifications" className="mt-20">
           <ProjectsAndCertifications />
         </div>
 
-        <div id="achievements" className="mt-10">
+        <div id="achievements" className="mt-20">
           <Achievements />
         </div>
 
-        <div id="contact" className="mt-10">
+        <div id="contact" className="mt-20">
           <Contact />
         </div>
       </div>
     </div>
   );
 }
-
-
-
-
