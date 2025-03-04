@@ -11,13 +11,13 @@ import Contact from "./sections/contact";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-start overflow-hidden text-center px-6 mt-35">
+    <div className="relative min-h-screen flex flex-col items-center justify-start overflow-hidden text-center px-6 mt-35 sm:px-4">
       
       {/* Aurora Background */}
       <div className="aurora absolute top-0 left-0 w-full h-full"></div>
 
       {/* Transparent Top Bar */}
-      <div className="fixed top-0 left-0 w-full h-[3cm] bg-white/10 backdrop-blur-md shadow-md flex items-center px-8 z-50">
+      <div className="fixed top-0 left-0 w-full h-[3cm] bg-white/10 backdrop-blur-md shadow-md flex items-center px-8 z-50 sm:h-[2.5cm] sm:px-4">
         <a
           href="#top"
           className="text-cyan-200 text-4xl font-extrabold tracking-wide font-poppins transform transition-transform duration-300 hover:scale-110 hover:text-purple-400"
@@ -30,7 +30,7 @@ export default function Home() {
       <div className="flex flex-col justify-center items-center flex-grow pt-16 space-y-8">
         {/* Animated Heading */}
         <motion.h1
-          className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-400 text-7xl font-extrabold leading-tight font-poppins"
+          className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-400 text-7xl sm:text-5xl font-extrabold leading-tight font-poppins"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -50,10 +50,10 @@ export default function Home() {
         </motion.p>
 
         {/* Section Buttons */}
-        <div className="mt-12 flex flex-wrap justify-center space-x-4">
+        <div className="mt-12 flex flex-wrap justify-center space-x-4 sm:space-x-2 sm:space-y-4">
           <a href="#about">
             <motion.button
-              className="bg-gradient-to-r from-cyan-300 to-purple-400 text-black px-6 py-3 rounded-full text-xl font-poppins transition duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-purple-500"
+              className="bg-gradient-to-r from-cyan-300 to-purple-400 text-black px-6 py-3 rounded-full text-xl sm:text-lg font-poppins transition duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-purple-500"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.5, delay: 1 }}

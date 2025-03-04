@@ -63,3 +63,18 @@ html {
   animation: aurora 7s infinite alternate ease-in-out;
   z-index: -1;
 }
+
+@media screen and (max-width: 768px) {
+  .aurora {
+    background-size: cover; /* Adjust background scaling */
+  }
+  
+  body {
+    font-size: 14px; /* Reduce font size */
+  }
+
+  .text-7xl {
+    font-size: 2rem !important; /* Override for smaller screens */
+  }
+}
+

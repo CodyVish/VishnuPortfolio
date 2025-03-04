@@ -4,21 +4,21 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <div id="about" className="h-screen flex justify-center items-center mt-80">
+    <div id="about" className="min-h-screen flex justify-center items-center px-6 sm:px-4 mt-40 sm:mt-90">
       <motion.div
-        className="max-w-4xl text-center px-8 py-16 bg-white/10 rounded-lg shadow-lg"
+        className="max-w-4xl w-full text-center px-8 py-10 sm:px-4 sm:py-6 bg-white/10 rounded-lg shadow-lg"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.5 }}
       >
         <h2
-          className="text-3xl text-cyan-200 font-extrabold mb-6 transform transition-transform duration-300 hover:scale-110 hover:-translate-y-2"
+          className="text-3xl sm:text-4xl text-cyan-200 font-extrabold mb-6 transform transition-transform duration-300 hover:scale-110 hover:-translate-y-2"
         >
           About Me
         </h2>
 
         <motion.p
-          className="text-gray-300 text-xl leading-relaxed font-inter mb-4"
+          className="text-gray-300 text-xl sm:text-lg leading-relaxed font-inter mb-4"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5 }}
@@ -27,15 +27,16 @@ export default function About() {
         </motion.p>
 
         <motion.p
-          className="text-gray-300 text-xl leading-relaxed font-inter mb-4"
+          className="text-gray-300 text-xl sm:text-lg leading-relaxed font-inter mb-4"
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5 }}
         >
-I am from Rajahmundry, Andhra Pradesh, where I completed my high school and intermediate education. I earned my Bachelors degree in Computer Science and Engineering with a specialization in Artificial Intelligence and Data Science from BVC Engineering College (Odalarevu, AP) in 2024.        </motion.p>
+          I am from Rajahmundry, Andhra Pradesh, where I completed my high school and intermediate education. I earned my Bachelors degree in Computer Science and Engineering with a specialization in Artificial Intelligence and Data Science from BVC Engineering College (Odalarevu, AP) in 2024.
+        </motion.p>
 
         <motion.p
-          className="text-gray-300 text-xl leading-relaxed font-inter mb-4"
+          className="text-gray-300 text-xl sm:text-lg leading-relaxed font-inter mb-4"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5 }}
@@ -44,7 +45,7 @@ I am from Rajahmundry, Andhra Pradesh, where I completed my high school and inte
         </motion.p>
 
         <motion.p
-          className="text-gray-300 text-xl leading-relaxed font-inter mb-4"
+          className="text-gray-300 text-xl sm:text-lg leading-relaxed font-inter mb-4"
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5 }}
@@ -53,7 +54,7 @@ I am from Rajahmundry, Andhra Pradesh, where I completed my high school and inte
         </motion.p>
 
         <motion.p
-          className="text-gray-300 text-xl leading-relaxed font-inter"
+          className="text-gray-300 text-xl sm:text-lg leading-relaxed font-inter"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5 }}
