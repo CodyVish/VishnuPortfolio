@@ -13,7 +13,7 @@ export default function Contact() {
         transition={{ duration: 1.5 }}
         className="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-400 cursor-pointer hover:scale-110 transition-transform duration-300 mb-10 text-center"
       >
-        Lets Talk!
+        Lets connect!
       </motion.h2>
 
       {/* Icons Section with Framer Motion Animation */}
